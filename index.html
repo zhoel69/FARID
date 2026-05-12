@@ -1,0 +1,1979 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"
+/>
+
+<meta
+name="format-detection"
+content="telephone=no"
+/>
+
+<title>PT. BIMA PANDAWA JAYA</title>
+
+<link
+href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet"
+/>
+
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
+
+<style>
+
+/* =========================
+RESET
+========================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+
+  -webkit-user-select:none;
+  user-select:none;
+
+  -webkit-touch-callout:none;
+  -webkit-tap-highlight-color:transparent;
+}
+
+html{
+  scroll-behavior:smooth;
+  overflow-x:hidden;
+}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:#050505;
+  color:#f5f5f5;
+  overflow-x:hidden;
+}
+
+img{
+  max-width:100%;
+  display:block;
+}
+
+.container{
+  width:100%;
+  max-width:1180px;
+  margin:auto;
+  padding:0 22px;
+}
+
+/* =========================
+NAVBAR
+========================= */
+
+.navbar{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:9999;
+
+  background:rgba(0,0,0,0.78);
+  backdrop-filter:blur(14px);
+
+  border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+.nav-content{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:14px 0;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.logo img{
+  width:58px;
+  height:58px;
+
+  object-fit:cover;
+
+  border-radius:50%;
+
+  border:2px solid rgba(255,204,0,0.85);
+
+  padding:4px;
+
+  background:#111;
+
+  box-shadow:
+  0 0 0 3px rgba(255,204,0,0.08),
+  0 6px 18px rgba(0,0,0,0.35);
+
+  transition:0.35s ease;
+}
+
+/* efek hover elegan */
+.logo img:hover{
+  transform:scale(1.05);
+  border-color:#ffcc00;
+}
+
+.logo-text{
+  line-height:1.1;
+}
+
+.logo-text h2{
+  color:white;
+  font-size:22px;
+  font-weight:700;
+  letter-spacing:1px;
+}
+
+.logo-text span{
+  color:#ffcc00;
+  font-size:12px;
+  letter-spacing:2px;
+}
+
+.menu-toggle{
+  width:50px;
+  height:50px;
+
+  border:none;
+  border-radius:16px;
+
+  background:#ffcc00;
+  color:#111;
+
+  font-size:24px;
+  font-weight:700;
+
+  cursor:pointer;
+}
+
+/* =========================
+MOBILE MENU
+========================= */
+
+.mobile-menu{
+  position:fixed;
+
+  top:82px;
+  right:20px;
+
+  width:240px;
+
+  background:rgba(15,15,15,0.96);
+
+  backdrop-filter:blur(16px);
+
+  border:1px solid rgba(255,255,255,0.08);
+
+  border-radius:26px;
+
+  padding:18px;
+
+  display:none;
+  flex-direction:column;
+  gap:10px;
+
+  z-index:99999;
+}
+
+.mobile-menu.active{
+  display:flex;
+}
+
+.mobile-menu a{
+  text-decoration:none;
+}
+
+.mobile-menu button{
+  width:100%;
+
+  border:none;
+
+  background:rgba(255,255,255,0.06);
+
+  color:white;
+
+  padding:13px 16px;
+
+  border-radius:16px;
+
+  font-size:13px;
+  font-weight:600;
+
+  cursor:pointer;
+
+  transition:0.3s;
+}
+
+.mobile-menu button:hover{
+  background:#ffcc00;
+  color:#111;
+}
+
+/* =========================
+HERO
+========================= */
+
+.hero{
+  min-height:100vh;
+
+  background:
+  linear-gradient(rgba(0,0,0,0.78),rgba(0,0,0,0.84)),
+  url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=1600&auto=format&fit=crop');
+
+  background-size:cover;
+  background-position:center;
+
+  display:flex;
+  align-items:center;
+
+  padding-top:130px;
+  padding-bottom:90px;
+}
+
+.hero-content{
+  max-width:760px;
+  color:white;
+}
+
+.badge{
+  display:inline-block;
+
+  padding:11px 18px;
+
+  border-radius:60px;
+
+  background:rgba(255,255,255,0.08);
+
+  border:1px solid rgba(255,255,255,0.10);
+
+  margin-bottom:26px;
+
+  font-size:13px;
+  font-weight:500;
+}
+
+.hero h1{
+  font-size:60px;
+  line-height:1.1;
+  margin-bottom:24px;
+  font-weight:800;
+}
+
+.hero h1 span{
+  color:#ffcc00;
+}
+
+.hero p{
+  font-size:16px;
+  line-height:2;
+  color:#e5e5e5;
+}
+
+.hero-buttons{
+  margin-top:38px;
+
+  display:flex;
+  gap:16px;
+  flex-wrap:wrap;
+}
+
+.hero-buttons a{
+  text-decoration:none;
+}
+
+.hero-buttons button{
+  border:none;
+
+  padding:16px 28px;
+
+  border-radius:60px;
+
+  font-size:14px;
+  font-weight:700;
+
+  cursor:pointer;
+
+  transition:0.3s;
+}
+
+.btn-yellow{
+  background:#ffcc00;
+  color:#111;
+}
+
+.btn-outline{
+  background:transparent;
+  color:white;
+  border:1px solid rgba(255,255,255,0.24);
+}
+
+.btn-yellow:hover,
+.btn-outline:hover{
+  transform:translateY(-4px);
+}
+
+/* =========================
+SECTION
+========================= */
+
+.section{
+  padding:90px 0;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:55px;
+}
+
+.section-title h2{
+  font-size:40px;
+  margin-bottom:16px;
+}
+
+.section-title p{
+  max-width:760px;
+  margin:auto;
+  color:#666;
+  line-height:1.9;
+  font-size:15px;
+}
+
+/* =========================
+ABOUT
+========================= */
+
+.about-box{
+  background:white;
+
+  padding:40px;
+
+  border-radius:28px;
+
+  box-shadow:0 12px 35px rgba(0,0,0,0.05);
+}
+
+.about-box p{
+  color:#555;
+  line-height:2;
+  margin-bottom:20px;
+  font-size:15px;
+}
+
+/* =========================
+VISI MISI
+========================= */
+
+.vm-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:24px;
+}
+
+.vm-box{
+  background:white;
+
+  padding:36px;
+
+  border-radius:28px;
+
+  box-shadow:0 12px 35px rgba(0,0,0,0.05);
+}
+
+.vm-box h3{
+  font-size:28px;
+  margin-bottom:18px;
+}
+
+.vm-box p,
+.vm-box li{
+  color:#555;
+  line-height:2;
+  font-size:15px;
+}
+
+.vm-box ul{
+  padding-left:22px;
+}
+
+/* =========================
+SERVICES
+========================= */
+
+.services{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:22px;
+}
+
+.service-box{
+  background:white;
+
+  padding:30px;
+
+  border-radius:26px;
+
+  box-shadow:0 12px 35px rgba(0,0,0,0.05);
+
+  transition:0.3s;
+}
+
+.service-box:hover{
+  transform:translateY(-5px);
+}
+
+.service-icon{
+  font-size:34px;
+  margin-bottom:16px;
+}
+
+.service-box h3{
+  font-size:18px;
+  line-height:1.7;
+}
+
+/* =========================
+CORE VALUES
+========================= */
+
+.values{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:22px;
+}
+
+.value-box{
+  background:#111;
+  color:white;
+
+  padding:34px 24px;
+
+  border-radius:28px;
+
+  text-align:center;
+}
+
+.value-letter{
+  width:68px;
+  height:68px;
+
+  margin:auto auto 18px;
+
+  border-radius:50%;
+
+  background:#ffcc00;
+
+  color:#111;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  font-size:30px;
+  font-weight:800;
+}
+
+.value-box h3{
+  color:#ffcc00;
+  font-size:22px;
+  margin-bottom:10px;
+}
+
+.value-box p{
+  color:#ddd;
+  line-height:1.8;
+  font-size:14px;
+}
+
+/* =========================
+TEAM
+========================= */
+
+.team-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:22px;
+}
+
+.team-box{
+  background:white;
+
+  border-radius:28px;
+
+  overflow:hidden;
+
+  text-align:center;
+
+  box-shadow:0 12px 35px rgba(0,0,0,0.05);
+}
+
+.team-box img{
+  width:120px;
+  height:120px;
+
+  object-fit:cover;
+
+  border-radius:50%;
+
+  margin:28px auto 10px;
+
+  border:4px solid #f3f3f3;
+
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+
+  transition:0.35s ease;
+}
+
+.team-box:hover img{
+  transform:scale(1.06);
+}
+
+.team-box h3{
+  margin-top:20px;
+  font-size:22px;
+}
+
+.team-box p{
+  color:#666;
+  margin:12px 0 28px;
+  font-size:14px;
+}
+
+/* =========================
+PROJECT
+========================= */
+
+.project-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:22px;
+}
+
+.project-box{
+  background:white;
+
+  border-radius:26px;
+
+  overflow:hidden;
+
+  box-shadow:0 12px 35px rgba(0,0,0,0.05);
+
+  cursor:pointer;
+
+  transition:0.35s ease;
+}
+
+.project-box:hover{
+  transform:translateY(-6px);
+
+  box-shadow:0 18px 45px rgba(0,0,0,0.12);
+}
+
+.project-box img{
+  width:100%;
+
+  height:180px;
+
+  object-fit:cover;
+
+  border-radius:18px 18px 0 0;
+
+  transition:0.35s ease;
+}
+
+.project-box:hover img{
+  transform:scale(1.04);
+}
+
+.project-content{
+  padding:24px;
+}
+
+.project-tag{
+  color:#ff9900;
+  font-size:12px;
+  font-weight:700;
+  margin-bottom:10px;
+}
+
+.project-content h3{
+  line-height:1.8;
+  font-size:16px;
+}
+
+/* =========================
+TRUST
+========================= */
+
+.trust-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:22px;
+}
+
+.trust-box{
+  background:white;
+
+  padding:34px;
+
+  border-radius:28px;
+
+  box-shadow:0 12px 35px rgba(0,0,0,0.05);
+}
+
+.trust-box h3{
+  font-size:24px;
+  margin-bottom:18px;
+}
+
+.trust-box p{
+  color:#555;
+  line-height:2;
+  font-size:14px;
+}
+
+/* =========================
+CONTACT
+========================= */
+
+.contact-section{
+  background:#111;
+  color:white;
+}
+
+.contact-wrapper{
+  max-width:780px;
+  margin:auto;
+  text-align:center;
+}
+
+.contact-wrapper h2{
+  font-size:42px;
+  margin-bottom:18px;
+}
+
+.contact-wrapper p{
+  color:#ddd;
+  line-height:2;
+  font-size:15px;
+}
+
+.contact-address{
+  margin-top:26px;
+
+  color:#ffcc00;
+
+  font-size:17px;
+  font-weight:600;
+
+  line-height:2;
+}
+
+.phone{
+  margin-top:24px;
+
+  font-size:28px;
+  font-weight:800;
+
+  color:#ffcc00;
+}
+
+.email{
+  margin-top:14px;
+
+  font-size:16px;
+  color:#ddd;
+}
+
+.contact-icons{
+  margin-top:42px;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  gap:42px;
+}
+
+.contact-icons a{
+  text-decoration:none;
+}
+
+/* icon style */
+.contact-icon{
+  width:78px;
+  height:78px;
+
+  border-radius:50%;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  font-size:42px;
+
+  background:white;
+
+  transition:0.18s ease;
+
+  box-shadow:
+  0 10px 28px rgba(0,0,0,0.28);
+}
+
+/* animasi kempes */
+.contact-icon:active{
+  transform:scale(0.88);
+}
+
+/* hover */
+.contact-icon:hover{
+  transform:translateY(-4px);
+}
+
+/* warna resmi whatsapp */
+.wa-icon{
+  color:#25D366;
+}
+
+/* warna email resmi */
+.mail-icon{
+  color:#EA4335;
+}
+
+/* mobile */
+@media(max-width:768px){
+
+  .contact-buttons{
+    gap:30px;
+  }
+
+  .contact-icon{
+    width:70px;
+    height:70px;
+
+    font-size:36px;
+  }
+
+}
+
+/* =========================
+FOOTER
+========================= */
+
+.footer{
+  background:#0a0a0a;
+
+  color:#bbb;
+
+  text-align:center;
+
+  padding:40px 20px;
+}
+
+.footer p{
+  line-height:2;
+  font-size:14px;
+}
+
+/* =========================
+MOBILE
+========================= */
+
+@media(max-width:768px){
+
+  .hero{
+    padding-top:125px;
+  }
+
+  .hero h1{
+    font-size:42px;
+  }
+
+  .hero p{
+    font-size:14px;
+  }
+
+  .hero-buttons{
+    flex-direction:column;
+  }
+
+  .hero-buttons button{
+    width:100%;
+  }
+
+  .section{
+    padding:75px 0;
+  }
+
+  .section-title h2,
+  .contact-wrapper h2{
+    font-size:30px;
+  }
+
+  .vm-grid{
+    grid-template-columns:1fr;
+  }
+
+  .phone{
+    font-size:22px;
+  }
+
+  .about-box,
+  .vm-box,
+  .service-box,
+  .value-box,
+  .trust-box{
+    padding:28px;
+  }
+
+}
+
+</style>
+
+</head>
+
+<body
+oncontextmenu="return false"
+oncopy="return false"
+oncut="return false"
+onpaste="return false"
+ondragstart="return false"
+onselectstart="return false"
+>
+
+<!-- NAVBAR -->
+
+<div class="navbar">
+
+  <div class="container nav-content">
+
+    <div class="logo">
+
+      <img src="logo.jpg" alt="Logo">
+
+      <div class="logo-text">
+        <h2>BIMA</h2>
+        <span>PANDAWA JAYA</span>
+      </div>
+
+    </div>
+
+    <button class="menu-toggle" onclick="toggleMenu()">
+      ☰
+    </button>
+
+  </div>
+
+</div>
+
+<!-- MOBILE MENU -->
+
+<div class="mobile-menu" id="mobileMenu">
+
+  <a href="#home"><button>HOME</button></a>
+  <a href="#about"><button>ABOUT US</button></a>
+  <a href="#visi"><button>VISI & MISI</button></a>
+  <a href="#services"><button>OUR SERVICES</button></a>
+  <a href="#values"><button>CORE VALUES</button></a>
+  <a href="#team"><button>OUR TEAM</button></a>
+  <a href="#project"><button>OUR PROJECT</button></a>
+  <a href="#trust"><button>BUILD TRUST</button></a>
+  <a href="#contact"><button>CONTACT</button></a>
+
+</div>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+  <div class="container">
+
+    <div class="hero-content">
+
+      <div class="badge">
+        COMPANY PROFILE 2024
+      </div>
+
+      <h1>
+        PT. BIMA
+        <span>PANDAWA JAYA</span>
+      </h1>
+
+      <p>
+        PT. BIMA PANDAWA JAYA merupakan perusahaan
+        yang berkonsentrasi terhadap hilirisasi sektor industri
+        dengan meliputi penanganan sebuah perusahaan dalam menentukan
+        proses awal-akhir, pengolahan, pengembangan dan divertasi.
+      </p>
+
+      <div class="hero-buttons">
+
+        <a href="#services">
+          <button class="btn-yellow">
+            OUR SERVICES
+          </button>
+        </a>
+
+        <a href="https://wa.me/6285171521775" target="_blank">
+          <button class="btn-outline">
+            CONTACT US
+          </button>
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section class="section" id="about">
+
+  <div class="container">
+
+    <div class="section-title">
+      <h2>ABOUT US</h2>
+    </div>
+
+    <div class="about-box">
+
+  <p>
+    PT. BIMA PANDAWA JAYA merupakan perusahaan yang bergerak di bidang hilirisasi sektor industri dengan fokus pada pengelolaan, pengembangan, serta penanganan proses operasional perusahaan secara menyeluruh dari tahap awal hingga tahap akhir. Kami hadir sebagai mitra profesional yang mendukung kebutuhan perusahaan dalam berbagai aspek pengembangan usaha, pengolahan, pengawasan, hingga proses diversifikasi yang berorientasi pada kualitas dan keberlanjutan.
+  </p>
+
+  <p>
+    PT. BIMA PANDAWA JAYA menyediakan berbagai layanan profesional yang mencakup pembuatan legalitas perusahaan, konsultan manajemen dan ISO, civil construction & engineering, pengadaan fasilitas perusahaan, hingga general trading. Dengan dukungan tenaga kerja yang kompeten dan berpengalaman, kami berkomitmen memberikan pelayanan terbaik, solusi yang efektif, serta hasil pekerjaan yang berkualitas sesuai kebutuhan klien dari sektor pemerintah maupun swasta.
+  </p>
+
+  <p>
+    Sejak berdiri dan aktif beroperasi pada Tahun 2023, PT. BIMA PANDAWA JAYA telah dipercaya dalam menangani berbagai pekerjaan dan proyek, termasuk pekerjaan pada Dinas Kota Tangerang serta beberapa perusahaan swasta lainnya. Kepercayaan tersebut menjadi motivasi bagi kami untuk terus berkembang, menjaga profesionalitas kerja, serta membangun hubungan kerja sama yang baik dan berkelanjutan dengan seluruh mitra dan klien.
+  </p>
+
+</div>
+
+  </div>
+
+</section>
+
+<!-- VISI MISI -->
+
+<section class="section" id="visi">
+
+  <div class="container">
+
+    <div class="section-title">
+      <h2>VISI & MISI</h2>
+    </div>
+
+    <div class="vm-grid">
+
+  <div class="vm-box">
+
+    <h3>VISI</h3>
+
+    <p>
+      Menjadi perusahaan yang memiliki kualitas karya, produk, dan layanan jasa terbaik yang mampu memberikan nilai manfaat, kemakmuran, serta keberlanjutan bagi seluruh pemangku kepentingan dan masyarakat umum. PT. BIMA PANDAWA JAYA berkomitmen untuk terus berkembang sebagai perusahaan yang profesional, terpercaya, inovatif, serta mampu beradaptasi terhadap perkembangan industri dengan tetap menjaga kualitas, integritas, dan tanggung jawab sosial secara berkelanjutan.
+    </p>
+
+  </div>
+
+  <div class="vm-box">
+
+    <h3>MISI</h3>
+
+    <ul>
+
+      <li>
+        Menjalankan kegiatan usaha dengan menjaga keseimbangan lingkungan, sosial, dan keberlanjutan sesuai dengan nilai-nilai perusahaan (Corporate Values), serta mengacu pada ketentuan pemerintah, Sustainable Development Goals (SDGs), dan prinsip pembangunan berkelanjutan Triple Bottom Line.
+      </li>
+
+      <li>
+        Menjalin hubungan kerja sama yang profesional, harmonis, dan berkelanjutan dengan mitra jangka pendek maupun jangka panjang dari unsur pemerintah, swasta, komunitas, maupun masyarakat umum.
+      </li>
+
+      <li>
+        Memberdayakan serta meningkatkan kualitas dan kompetensi sumber daya lokal melalui pengembangan kemampuan kerja dan profesionalitas sumber daya manusia.
+      </li>
+
+      <li>
+        Menghasilkan karya, produk, dan layanan dalam negeri yang berkualitas tinggi, inovatif, serta memiliki keunggulan kompetitif.
+      </li>
+
+      <li>
+        Mendukung pertumbuhan ekonomi serta meningkatkan kesejahteraan masyarakat daerah secara harmonis, bersinergi, dan berkelanjutan.
+      </li>
+
+    </ul>
+
+  </div>
+
+</div>
+
+  </div>
+
+</section>
+
+<!-- SERVICES -->
+
+<section class="section" id="services">
+
+  <div class="container">
+
+    <div class="section-title">
+      <h2>OUR SERVICES</h2>
+    </div>
+
+    <div class="services">
+
+      <div class="service-box">
+        <div class="service-icon">🏢</div>
+        <h3>Konstruksi Gedung Perkantoran</h3>
+      </div>
+
+      <div class="service-box">
+        <div class="service-icon">🏠</div>
+        <h3>Konstruksi Gedung dan Rumah Hunian</h3>
+      </div>
+
+      <div class="service-box">
+        <div class="service-icon">🏫</div>
+        <h3>Konstruksi Gedung Pendidikan</h3>
+      </div>
+
+      <div class="service-box">
+        <div class="service-icon">🏥</div>
+        <h3>Konstruksi Gedung Kesehatan</h3>
+      </div>
+
+      <div class="service-box">
+        <div class="service-icon">🏭</div>
+        <h3>Konstruksi Gedung Industri</h3>
+      </div>
+
+      <div class="service-box">
+        <div class="service-icon">🛠️</div>
+        <h3>Renovasi Interior dan Exterior</h3>
+      </div>
+
+      <div class="service-box">
+        <div class="service-icon">🛣️</div>
+        <h3>Pengaspalan Jalan dan Infrastruktur</h3>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- CORE VALUES -->
+
+<section class="section" id="values">
+
+  <div class="container">
+
+    <div class="section-title">
+      <h2>CORE VALUES</h2>
+    </div>
+
+    <div class="values">
+
+  <div class="value-box">
+
+    <div class="value-letter">
+      I
+    </div>
+
+    <h3>INTEGRITAS</h3>
+
+    <p>
+      Menjunjung tinggi kejujuran,
+      tanggung jawab dan profesionalitas.
+    </p>
+
+  </div>
+
+  <div class="value-box">
+
+    <div class="value-letter">
+      K
+    </div>
+
+    <h3>KOMPETEN</h3>
+
+    <p>
+      Memiliki kemampuan,
+      pengalaman dan kualitas kerja terbaik.
+    </p>
+
+  </div>
+
+  <div class="value-box">
+
+    <div class="value-letter">
+      H
+    </div>
+
+    <h3>HARMONIS</h3>
+
+    <p>
+      Membangun hubungan kerja sama
+      yang sehat dan saling menghargai.
+    </p>
+
+  </div>
+
+  <div class="value-box">
+
+    <div class="value-letter">
+      L
+    </div>
+
+    <h3>LOYAL</h3>
+
+    <p>
+      Berkomitmen penuh terhadap
+      perusahaan dan kepuasan klien.
+    </p>
+
+  </div>
+
+  <div class="value-box">
+
+    <div class="value-letter">
+      A
+    </div>
+
+    <h3>ADAPTIF</h3>
+
+    <p>
+      Terus berkembang dan mampu
+      menyesuaikan diri terhadap perubahan.
+    </p>
+
+  </div>
+
+  <div class="value-box">
+
+    <div class="value-letter">
+      S
+    </div>
+
+    <h3>SINERGI</h3>
+
+    <p>
+      Mengutamakan kerja sama,
+      kolaborasi dan komunikasi
+      yang solid untuk hasil terbaik.
+    </p>
+
+  </div>
+
+</div>
+
+</section>
+
+<!-- TEAM -->
+
+<section class="section" id="team">
+
+  <div class="container">
+
+    <div class="section-title">
+      <h2>MEET OUR TEAM</h2>
+    </div>
+
+    <div class="team-grid">
+
+      <div class="team-box">
+
+        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1200&auto=format&fit=crop">
+
+        <h3>M. FARID AZIZ</h3>
+
+        <p>Komisaris Utama</p>
+
+      </div>
+
+      <div class="team-box">
+
+        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1200&auto=format&fit=crop">
+
+        <h3>RIZKY AWALUDIN</h3>
+
+        <p>Direktur Utama</p>
+
+      </div>
+
+      <div class="team-box">
+
+        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=1200&auto=format&fit=crop">
+
+        <h3>FUADI ANWAR</h3>
+
+        <p>Project Manager</p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- PROJECT -->
+
+<section class="section" id="project">
+
+  <div class="container">
+
+    <div class="section-title">
+      <h2>OUR PROJECT</h2>
+    </div>
+
+    <div class="project-grid">
+
+      <!-- PROJECT 1 -->
+      <div class="project-box" onclick="openGallery(0)" style="cursor:pointer;">
+
+        <img src="img/project1-1.jpg">
+
+        <div class="project-content">
+
+          <div class="project-tag">
+            OUR PROJECT
+          </div>
+
+          <h3>
+            Pembuatan Gapura SDN Buaran Mangga II
+          </h3>
+
+        </div>
+
+      </div>
+
+      <!-- PROJECT 2 -->
+      <div class="project-box" onclick="openGallery(1)" style="cursor:pointer;">
+
+        <img src="img/project2-1.jpg">
+
+        <div class="project-content">
+
+          <div class="project-tag">
+            OUR PROJECT
+          </div>
+
+          <h3>
+            Renovasi Toilet SDN Pasir Jaya 2
+          </h3>
+
+        </div>
+
+      </div>
+
+      <!-- PROJECT 3 -->
+      <div class="project-box" onclick="openGallery(2)" style="cursor:pointer;">
+
+        <img src="img/project3-1.jpg">
+
+        <div class="project-content">
+
+          <div class="project-tag">
+            OUR PROJECT
+          </div>
+
+          <h3>
+            Pembuatan Teralis Jendela dan Pintu
+          </h3>
+
+        </div>
+
+      </div>
+
+      <!-- PROJECT 4 -->
+      <div class="project-box" onclick="openGallery(3)" style="cursor:pointer;">
+
+        <img src="img/project4-1.jpg">
+
+        <div class="project-content">
+
+          <div class="project-tag">
+            OUR PROJECT
+          </div>
+
+          <h3>
+            Pembuatan Folding Gate
+          </h3>
+
+        </div>
+
+      </div>
+
+      <!-- PROJECT 5 -->
+      <div class="project-box" onclick="openGallery(4)" style="cursor:pointer;">
+
+        <img src="img/project5-1.jpg">
+
+        <div class="project-content">
+
+          <div class="project-tag">
+            OUR PROJECT
+          </div>
+
+          <h3>
+            Renovasi Pos Security dan Gedung
+          </h3>
+
+        </div>
+
+      </div>
+
+      <!-- PROJECT 6 -->
+      <div class="project-box" onclick="openGallery(5)" style="cursor:pointer;">
+
+        <img src="img/project6-1.jpg">
+
+        <div class="project-content">
+
+          <div class="project-tag">
+            OUR PROJECT
+          </div>
+
+          <h3>
+            Pembangunan Perumahan Beyt Sa'adah
+          </h3>
+
+        </div>
+
+      </div>
+
+      <!-- PROJECT 7 -->
+      <div class="project-box" onclick="openGallery(6)" style="cursor:pointer;">
+
+        <img src="img/project7-1.jpg">
+
+        <div class="project-content">
+
+          <div class="project-tag">
+            OUR PROJECT
+          </div>
+
+          <h3>
+            Project Tambahan 7
+          </h3>
+
+        </div>
+
+      </div>
+
+      <!-- PROJECT 8 -->
+      <div class="project-box" onclick="openGallery(7)" style="cursor:pointer;">
+
+        <img src="img/project8-1.jpg">
+
+        <div class="project-content">
+
+          <div class="project-tag">
+            OUR PROJECT
+          </div>
+
+          <h3>
+            Project Tambahan 8
+          </h3>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- TRUST -->
+
+<section class="section" id="trust">
+
+  <div class="container">
+
+    <div class="section-title">
+      <h2>BUILDING TRUST WITH US</h2>
+    </div>
+
+    <div class="trust-grid">
+
+  <div class="trust-box">
+
+    <h3>PLAN</h3>
+
+    <p>
+      Kami senantiasa mendengarkan setiap kebutuhan, keinginan, dan harapan klien secara detail sebagai langkah awal dalam membangun kerja sama yang baik. Dengan komunikasi yang terbuka dan profesional, kami memastikan setiap kebutuhan klien dapat dipahami secara menyeluruh sehingga menjadi dasar dalam penyusunan perencanaan pekerjaan yang tepat, efektif, dan sesuai target.
+    </p>
+
+  </div>
+
+  <div class="trust-box">
+
+    <h3>DO</h3>
+
+    <p>
+      Setelah memahami kebutuhan dan keinginan klien, kami mulai menyusun perencanaan awal secara detail dan terstruktur. Proses ini mencakup pembuatan gambar sketsa apabila diperlukan, penyusunan daftar material atau barang yang dibutuhkan, hingga rincian anggaran biaya pekerjaan secara transparan dan sistematis.
+    </p>
+
+  </div>
+
+  <div class="trust-box">
+
+    <h3>CHECK</h3>
+
+    <p>
+      Seluruh perencanaan yang telah kami susun akan kami diskusikan kembali bersama klien untuk memastikan setiap detail pekerjaan telah sesuai dengan kebutuhan dan keinginan yang diharapkan. Tahapan ini bertujuan untuk meminimalisir potensi kesalahan di kemudian hari serta memastikan seluruh rencana telah disetujui bersama sebelum pekerjaan dimulai.
+    </p>
+
+  </div>
+
+  <div class="trust-box">
+
+    <h3>ACTION</h3>
+
+    <p>
+      Setelah seluruh perencanaan disepakati dan tidak terdapat revisi tambahan dari pihak klien, maka proses pelaksanaan pekerjaan akan segera dilaksanakan sesuai jadwal dan kesepakatan bersama. Klien tetap dapat memantau perkembangan pekerjaan melalui laporan progres yang kami berikan secara berkala hingga proses pekerjaan selesai dan serah terima dilakukan dengan baik.
+    </p>
+
+  </div>
+
+</div>
+
+  </div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="section contact-section" id="contact">
+
+  <div class="container">
+
+    <div class="contact-wrapper">
+
+      <h2>CONTACT US</h2>
+
+      <p>
+        PT. BIMA PANDAWA JAYA
+      </p>
+
+      <div class="contact-address">
+        JL. H. ANING, SANGIANG JAYA,
+        PERIUK, KOTA TANGERANG, BANTEN.
+      </div>
+
+      <div class="phone">
+        0851-7152-1775
+      </div>
+
+      <div class="email">
+        pandawabimajaya@gmail.com
+      </div>
+
+      <div class="contact-icons">
+
+  <!-- WhatsApp -->
+  <a
+  href="https://wa.me/6285171521775"
+  target="_blank"
+  class="contact-icon wa-icon"
+  >
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- Email -->
+  <a
+  href="mailto:pandawabimajaya@gmail.com"
+  class="contact-icon mail-icon"
+  >
+    <i class="fa-solid fa-envelope"></i>
+  </a>
+
+</div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+  <p>
+    © 2024 PT. BIMA PANDAWA JAYA
+    <br>
+    Company Profile & Corporate Website
+  </p>
+
+</footer>
+
+<!-- GALLERY MODAL -->
+<div id="galleryModal" class="gallery-modal">
+
+  <!-- tombol close -->
+  <button class="close-gallery" onclick="closeGallery()">
+    ✕
+  </button>
+
+  <!-- tombol prev -->
+  <button class="nav-gallery prev-gallery" onclick="prevImg()">
+    ❮
+  </button>
+
+  <!-- gambar -->
+  <img id="modalImg" class="gallery-image">
+
+  <!-- tombol next -->
+  <button class="nav-gallery next-gallery" onclick="nextImg()">
+    ❯
+  </button>
+
+</div>
+
+<style>
+
+/* =========================
+GALLERY MODAL
+========================= */
+
+.gallery-modal{
+  display:none;
+  position:fixed;
+  inset:0;
+  z-index:999999;
+
+  background:rgba(0,0,0,0.92);
+
+  justify-content:center;
+  align-items:center;
+
+  overflow:hidden;
+}
+
+/* gambar modal */
+.gallery-image{
+  max-width:92%;
+  max-height:88vh;
+
+  border-radius:18px;
+
+  object-fit:contain;
+
+  box-shadow:0 10px 40px rgba(0,0,0,0.45);
+
+  animation:fadeZoom .25s ease;
+}
+
+/* tombol navigasi */
+.nav-gallery{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+
+  width:42px;
+  height:42px;
+
+  border:none;
+  border-radius:50%;
+
+  background:rgba(255,255,255,0.12);
+  backdrop-filter:blur(10px);
+
+  color:white;
+
+  font-size:20px;
+  font-weight:700;
+
+  cursor:pointer;
+
+  transition:.25s;
+}
+
+/* hover */
+.nav-gallery:hover,
+.close-gallery:hover{
+  background:#ffcc00;
+  color:#111;
+}
+
+/* posisi tombol */
+.prev-gallery{
+  left:18px;
+}
+
+.next-gallery{
+  right:18px;
+}
+
+/* tombol close */
+.close-gallery{
+  position:absolute;
+  top:18px;
+  right:18px;
+
+  width:40px;
+  height:40px;
+
+  border:none;
+  border-radius:50%;
+
+  background:rgba(255,255,255,0.12);
+  backdrop-filter:blur(10px);
+
+  color:white;
+
+  font-size:18px;
+  font-weight:700;
+
+  cursor:pointer;
+
+  transition:.25s;
+}
+
+/* animasi */
+@keyframes fadeZoom{
+  from{
+    opacity:0;
+    transform:scale(.96);
+  }
+  to{
+    opacity:1;
+    transform:scale(1);
+  }
+}
+
+/* =========================
+DARK LUXURY STYLE
+========================= */
+
+.section{
+  background:#050505;
+}
+
+.section:nth-child(even){
+  background:#0b0b0b;
+}
+
+/* title */
+.section-title h2{
+  color:#ffcc00;
+  font-weight:700;
+  letter-spacing:1px;
+}
+
+.section-title p{
+  color:#bdbdbd;
+}
+
+/* card style */
+.about-box,
+.vm-box,
+.service-box,
+.team-box,
+.project-box,
+.trust-box{
+  background:#0f0f0f;
+  border:1px solid rgba(255,204,0,0.15);
+
+  box-shadow:
+  0 10px 35px rgba(0,0,0,0.45);
+
+  transition:0.35s ease;
+}
+
+/* hover elegant */
+.about-box:hover,
+.vm-box:hover,
+.service-box:hover,
+.team-box:hover,
+.project-box:hover,
+.trust-box:hover{
+  transform:translateY(-6px);
+
+  border-color:#ffcc00;
+
+  box-shadow:
+  0 0 18px rgba(255,204,0,0.12),
+  0 12px 45px rgba(0,0,0,0.55);
+}
+
+/* text */
+.about-box p,
+.vm-box p,
+.vm-box li,
+.service-box h3,
+.team-box p,
+.trust-box p,
+.project-content h3{
+  color:#d8d8d8;
+}
+
+/* heading */
+.vm-box h3,
+.trust-box h3,
+.team-box h3{
+  color:#ffcc00;
+}
+
+/* services icon */
+.service-icon{
+  font-size:42px;
+  filter:drop-shadow(0 0 10px rgba(255,204,0,0.25));
+}
+
+/* navbar */
+.navbar{
+  background:rgba(0,0,0,0.88);
+  border-bottom:1px solid rgba(255,204,0,0.18);
+}
+
+/* menu */
+.mobile-menu{
+  background:#0d0d0d;
+  border:1px solid rgba(255,204,0,0.15);
+}
+
+/* footer */
+.footer{
+  background:#000;
+  border-top:1px solid rgba(255,204,0,0.15);
+}
+
+/* elegant line */
+.section-title::after{
+  content:"";
+  width:90px;
+  height:2px;
+  background:#ffcc00;
+  display:block;
+  margin:18px auto 0;
+  border-radius:20px;
+}
+
+/* project image */
+.project-box img{
+  filter:brightness(.92);
+}
+
+/* contact section */
+.contact-section{
+  background:
+  linear-gradient(
+    135deg,
+    #050505,
+    #111111
+  );
+}
+
+/* scrollbar */
+::-webkit-scrollbar{
+  width:10px;
+}
+
+::-webkit-scrollbar-track{
+  background:#050505;
+}
+
+::-webkit-scrollbar-thumb{
+  background:#ffcc00;
+  border-radius:20px;
+}
+
+/* mobile */
+@media(max-width:768px){
+
+  .nav-gallery{
+    width:38px;
+    height:38px;
+    font-size:18px;
+  }
+
+  .close-gallery{
+    width:36px;
+    height:36px;
+    font-size:16px;
+  }
+
+}
+
+</style>
+
+<script>
+
+/* =========================
+MENU TOGGLE
+========================= */
+function toggleMenu(){
+  document.getElementById("mobileMenu").classList.toggle("active");
+}
+
+document.querySelectorAll(".mobile-menu a").forEach(link => {
+  link.addEventListener("click", () => {
+    document.getElementById("mobileMenu").classList.remove("active");
+  });
+});
+
+/* =========================
+GALLERY DATA
+========================= */
+
+const galleries = [
+
+  /* PROJECT 1 */
+  [
+    "img/project1-1.jpg",
+    "img/project1-2.jpg",
+    "img/project1-3.jpg",
+    "img/project1-4.jpg"
+  ],
+
+  /* PROJECT 2 */
+  [
+    "img/project2-1.jpg",
+    "img/project2-2.jpg",
+    "img/project2-3.jpg"
+  ],
+
+  /* PROJECT 3 */
+  [
+    "img/project3-1.jpg",
+    "img/project3-2.jpg",
+    "img/project3-3.jpg",
+    "img/project3-4.jpg"
+  ],
+
+  /* PROJECT 4 */
+  [
+    "img/project4-1.jpg",
+    "img/project4-2.jpg",
+    "img/project4-3.jpg"
+  ],
+
+  /* PROJECT 5 */
+  [
+    "img/project5-1.jpg",
+    "img/project5-2.jpg",
+    "img/project5-3.jpg",
+    "img/project5-4.jpg"
+  ],
+
+  /* PROJECT 6 */
+  [
+    "img/project6-1.jpg",
+    "img/project6-2.jpg",
+    "img/project6-3.jpg"
+  ],
+
+  /* PROJECT 7 */
+  [
+    "img/project7-1.jpg",
+    "img/project7-2.jpg",
+    "img/project7-3.jpg"
+  ],
+
+  /* PROJECT 8 */
+  [
+    "img/project8-1.jpg",
+    "img/project8-2.jpg",
+    "img/project8-3.jpg",
+    "img/project8-4.jpg"
+  ]
+
+];
+
+/* =========================
+STATE
+========================= */
+
+let currentGallery = 0;
+let index = 0;
+
+/* =========================
+OPEN GALLERY
+========================= */
+
+function openGallery(galleryIndex){
+
+  currentGallery = galleryIndex;
+  index = 0;
+
+  document.getElementById("modalImg").src =
+    galleries[currentGallery][index];
+
+  document.getElementById("galleryModal").style.display = "flex";
+}
+
+/* =========================
+CLOSE GALLERY
+========================= */
+
+function closeGallery(){
+  document.getElementById("galleryModal").style.display = "none";
+}
+
+/* =========================
+NEXT IMAGE
+========================= */
+
+function nextImg(){
+
+  index = (index + 1) %
+    galleries[currentGallery].length;
+
+  document.getElementById("modalImg").src =
+    galleries[currentGallery][index];
+}
+
+/* =========================
+PREVIOUS IMAGE
+========================= */
+
+function prevImg(){
+
+  index =
+    (index - 1 + galleries[currentGallery].length)
+    % galleries[currentGallery].length;
+
+  document.getElementById("modalImg").src =
+    galleries[currentGallery][index];
+}
+
+/* =========================
+CLICK BACKGROUND TO CLOSE
+========================= */
+
+document.getElementById("galleryModal")
+.addEventListener("click", function(e){
+
+  if(e.target.id === "galleryModal"){
+    closeGallery();
+  }
+
+});
+
+</script>
+
+</body>
+</html>
